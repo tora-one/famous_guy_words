@@ -1,22 +1,19 @@
 import type { Metadata } from "next";
-import { Noto_Serif_JP } from "next/font/google";
 import { MantineProvider, createTheme } from '@mantine/core';
 import '@mantine/core/styles.css';
 import "./globals.css";
 
-const notoSelifJp = Noto_Serif_JP({
-  variable: "--font-noto-sans-jp",
-  subsets: ["latin"],
-});
+import { cinecaption } from "./font/cinecaption";
+
 
 // Mantineテーマの設定
 const theme = createTheme({
-  fontFamily: 'var(--font-noto-sans-jp), sans-serif',
+  fontFamily: 'var(--font-cinecaption), sans-serif',
 });
 
 export const metadata: Metadata = {
-  title: "偉人の名言集",
-  description: "歴史上の偉人たちの心に響く言葉",
+  title: "小説の名台詞",
+  description: "物語の中で生まれし美しき言葉達",
 };
 
 export default function RootLayout({
@@ -25,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
-      <body className={`${notoSelifJp.variable}`}>
+    <html lang="ja" className={cinecaption.variable}>
+      <body>
         <MantineProvider theme={theme}>
           {children}
         </MantineProvider>

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { AppShell, Header, Footer, Text, Group, Button } from '@mantine/core';
+import { AppShell, Text, Group, Button } from '@mantine/core';
 import Link from 'next/link';
 
 interface AppLayoutProps {
@@ -11,7 +11,7 @@ export function AppLayout({ children }: AppLayoutProps) {
     <AppShell
       padding="md"
       header={
-        <Header height={60} p="xs">
+        <AppShell.Header h={60} p="xs">
           <Group justify="space-between">
             <Text fw={700} size="lg" component={Link} href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
               偉人の名言集
@@ -28,12 +28,12 @@ export function AppLayout({ children }: AppLayoutProps) {
               </Button>
             </Group>
           </Group>
-        </Header>
+        </AppShell.Header>
       }
       footer={
-        <Footer height={60} p="md">
+        <AppShell.Footer h={60} p="md">
           <Text ta="center" size="sm">© 2025 偉人の名言集</Text>
-        </Footer>
+        </AppShell.Footer>
       }
     >
       {children}
