@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { getWords, Words } from '../api/words';
 import { Title, Text, Card, Grid, Loader, Alert, Select, Flex, Stack } from '@mantine/core';
 import { IconAlertCircle } from '@tabler/icons-react';
-import { AppLayout } from '../../components/AppLayout';
 
 export default function WordsPage() {
   const [category, setCategory] = useState<string>("all")
@@ -41,7 +40,6 @@ export default function WordsPage() {
 
 
   return (
-    <AppLayout>
       <Flex
       justify="center"
       style={{
@@ -100,6 +98,5 @@ export default function WordsPage() {
             }
         </Stack>
       </Flex>
-    </AppLayout>
   );
 }
