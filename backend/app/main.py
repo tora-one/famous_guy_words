@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .api.words import router as words_router
+from app.api.words import router as words_router
 from app.api import words
 
 
