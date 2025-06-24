@@ -1,6 +1,6 @@
 version: 1.0
 build:
-  path: backend
+  path: .
   docker:
     dockerfilePath: backend/Dockerfile
 run:
