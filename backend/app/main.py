@@ -1,8 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .api.words import router as words_router
+from app.api import words
+
 
 app = FastAPI(title="Famous Guy Words API")
+app.include_router(words.router, prefix="/api")
 
 # CORS設定
 app.add_middleware(
