@@ -29,6 +29,7 @@ famous_guy_words/
 ## セットアップと実行
 
 ### バックエンド（FastAPI）
+最後はDockerで実装しました。→AWSがuvicorn無理らしい
 ```bash
 # バックエンドディレクトリに移動
 cd backend
