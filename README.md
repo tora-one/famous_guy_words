@@ -61,6 +61,7 @@ npm run dev
 ## 初回セットアップ（初めての場合のみ）
 
 ### バックエンド（FastAPI）
+最後はDockerで実装しました。→AWSがuvicorn無理らしい
 ```bash
 cd backend
 
